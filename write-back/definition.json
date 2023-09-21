@@ -1,0 +1,423 @@
+{
+  "icon": "./assets/icon.svg",
+  "name": "Write-Back",
+  "hint": "Enable Write-Back for the data table",
+  "options": {
+    "aggregation": true,
+    "individualFilter": true,
+    "aggregateFilter": true
+  },
+  "settings": [
+    {
+      "name": {
+        "key": "API configuration"
+      },
+      "settings": [
+        {
+          "key": "requestType",
+          "name": "Request Type",
+          "type": "dropdown",
+          "defaultValue": "Post",
+          "options": [
+            {
+              "key": "get",
+              "label": "GET"
+            },
+            {
+              "key": "post",
+              "label": "POST"
+            }
+          ]
+        },
+        {
+          "name": "API Access Token",
+          "key": "accessToken",
+          "type": "text"
+        },
+        {
+          "key": "apiUrl",
+          "name": "API URL",
+          "type": "text",
+          "defaultValue": "http://localhost:8081/update"
+        },
+        {
+          "key": "bodyParams",
+          "name": "Body Parameters",
+          "type": "dropdown",
+          "defaultValue": "paramsAll",
+          "description": "All: Row content, UUID: Approve/Reject, Table Name: Load table",
+          "options": [
+            {
+              "label": "All",
+              "key": "paramsAll"
+            },
+            {
+              "label": "UUID",
+              "key": "paramsUUID"
+            },
+            {
+              "label": "Table Name",
+              "key": "paramsTableName"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "key": "Button Settings"
+      },
+      "settings": [
+        {
+          "name": "Layout Options",
+          "key": "layoutoptions",
+          "type": "dropdown",
+          "defaultValue": "btnrow",
+          "options": [
+            {
+              "key": "btnrow",
+              "label": "Button for each row"
+            },
+            {
+              "key": "btntbl",
+              "label": "Single Button"
+            }
+          ]
+        },
+        {
+          "name": "Button Label",
+          "key": "buttonText",
+          "type": "text",
+          "defaultValue": "Submit"
+        },
+        {
+          "name": {
+            "key": "Button With Options"
+          },
+          "key": "enableOptions",
+          "defaultValue": false,
+          "type": "boolean"
+        },
+        {
+          "name": "Options",
+          "key": "actionsOptions",
+          "type": "text",
+          "description": "Add actions with comma separators"
+        },
+        {
+          "name": "Button Icon",
+          "key": "buttonIcon",
+          "type": "dropdown",
+          "defaultValue": "None",
+          "options": [
+            {
+              "key": "pi pi-times-circle",
+              "label": "Remove"
+            },
+            {
+              "key": "pi pi-align-justify",
+              "label": "Hamburger"
+            },
+            {
+              "key": "pi pi-angle-double-left",
+              "label": "Double Left"
+            },
+            {
+              "key": "pi pi-angle-double-right",
+              "label": "Double Right"
+            },
+            {
+              "key": "pi pi-bell",
+              "label": "Bell"
+            },
+            {
+              "key": "pi pi-bookmark",
+              "label": "Bookmark"
+            },
+            {
+              "key": "pi pi-briefcase",
+              "label": "Briefcase"
+            },
+            {
+              "key": "pi pi-calendar",
+              "label": "Calendar"
+            },
+            {
+              "key": "pi pi-camera",
+              "label": "Camera"
+            },
+            {
+              "key": "pi pi-cart-plus",
+              "label": "Cart"
+            },
+            {
+              "key": "pi pi-check",
+              "label": "Check"
+            },
+            {
+              "key": "pi pi-clock",
+              "label": "Clock"
+            },
+            {
+              "key": "pi pi-clone",
+              "label": "Clone"
+            },
+            {
+              "key": "pi pi-cloud-upload",
+              "label": "Cloud"
+            },
+            {
+              "key": "pi pi-cog",
+              "label": "Gear"
+            },
+            {
+              "key": "pi pi-comment",
+              "label": "Comment"
+            },
+            {
+              "key": "pi pi-copy",
+              "label": "Copy"
+            },
+            {
+              "key": "pi pi-database",
+              "label": "Database"
+            },
+            {
+              "key": "pi pi-dollar",
+              "label": "Dollar"
+            },
+            {
+              "key": "pi pi-exclamation-triangle",
+              "label": "Exclamation"
+            },
+            {
+              "key": "pi pi-file-edit",
+              "label": "Edit"
+            },
+            {
+              "key": "pi pi-map-marker",
+              "label": "Marker"
+            },
+            {
+              "key": "pi-plus-circle",
+              "label": "Plus"
+            },
+            {
+              "key": "pi pi-save",
+              "label": "Save"
+            },
+            {
+              "key": "pi pi-star",
+              "label": "Star"
+            },
+            {
+              "key": "pi pi-sync",
+              "label": "Sync"
+            }
+          ]
+        },
+        {
+          "name": "Button Color",
+          "key": "buttonColor",
+          "type": "dropdown",
+          "defaultValue": "primary",
+          "options": [
+            {
+              "key": "primary",
+              "label": "Primary"
+            },
+            {
+              "key": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "key": "success",
+              "label": "Success"
+            },
+            {
+              "key": "info",
+              "label": "Info"
+            },
+            {
+              "key": "warning",
+              "label": "Warning"
+            },
+            {
+              "key": "help",
+              "label": "Help"
+            },
+            {
+              "key": "danger",
+              "label": "Danger"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "key": "Table Settings"
+      },
+      "settings": [
+        {
+          "name": "Insight ID",
+          "key": "insightID",
+          "type": "text"
+        },
+        {
+          "name": "Table Name",
+          "key": "tableName",
+          "type": "text"
+        },
+        {
+          "name": "Data File",
+          "key": "datafile",
+          "type": "text"
+        },
+        {
+          "name": {
+            "key": "Multi Select Rows"
+          },
+          "key": "multiSelectRows",
+          "defaultValue": false,
+          "type": "boolean"
+        },
+        {
+          "name": "Max Rows",
+          "key": "maxRows",
+          "type": "max-rows",
+          "defaultValue": 1000
+        },
+        {
+          "name": {
+            "key": "Rows Per Page"
+          },
+          "key": "tablePaginationRows",
+          "defaultValue": 5,
+          "type": "number"
+        },
+        {
+          "name": {
+            "key": "Show Grid Lines"
+          },
+          "key": "showGridLines",
+          "defaultValue": false,
+          "type": "boolean"
+        },
+        {
+          "name": {
+            "key": "Striped Rows"
+          },
+          "key": "stripedRows",
+          "defaultValue": false,
+          "type": "boolean"
+        },
+        {
+          "name": {
+            "key": "Sortable Columns"
+          },
+          "key": "tableSortable",
+          "defaultValue": false,
+          "type": "boolean"
+        },
+        {
+          "name": {
+            "key": "Resizable Columns"
+          },
+          "key": "resizableColumns",
+          "defaultValue": false,
+          "type": "boolean"
+        }
+      ]
+    }
+  ],
+  "bindingsTrays": [
+    {
+      "key": "dim",
+      "name": "Dimensions",
+      "queryRole": "row",
+      "maxCount": 100,
+      "settings": [
+        {
+          "name": "Settings",
+          "settings": [
+            {
+              "type": "sort",
+              "key": "symbol-sort-key",
+              "name": "Sort"
+            },
+            {
+              "name": "Aggregated",
+              "key": "aggregation",
+              "type": "boolean",
+              "defaultValue": true,
+              "description": "Aggregated/Listing Table"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tray-key",
+      "name": {
+        "key": "measure"
+      },
+      "queryRole": "measure",
+      "minCount": 1,
+      "settings": [
+        {
+          "name": "Customization",
+          "settings": [
+            {
+              "name": "Hide Column",
+              "key": "hidecolumn",
+              "type": "boolean"
+            },
+            {
+              "name": "Editable Fields",
+              "key": "editableFields",
+              "type": "boolean",
+              "description": "Enable editting measure value"
+            },
+            {
+              "name": "Enable Validation",
+              "key": "validateFields",
+              "type": "boolean",
+              "description": "Validate field between Max and Min"
+            },
+            {
+              "name": {
+                "key": "Min Value"
+              },
+              "key": "minValue",
+              "type": "number"
+            },
+            {
+              "name": {
+                "key": "Max Value"
+              },
+              "key": "maxValue",
+              "type": "number"
+            },
+            {
+              "name": "Scale",
+              "key": "scale1",
+              "type": "scale"
+            },
+            {
+              "name": "Format",
+              "key": "format",
+              "type": "number-format",
+              "defaultValue": "###,###"
+            },
+            {
+              "name": "Running Total",
+              "key": "running-total",
+              "type": "running-total"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
